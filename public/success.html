@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Berhasil - GOKILZZZ STUDIO</title>
-    <!-- Google Fonts: Montserrat -->
+    <!-- Google Fonts: Cinzel, Montserrat, & Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
     <!-- NAVBAR -->
     <header class="navbar">
-        <div class="logo">GOKILZZZ STUDIO</div>
-        <a href="index.html" class="btn-auth">BERANDA</a>
+        <a href="dashboard.html" class="logo">GOKILZZZ STUDIO</a>
+        <a href="dashboard.html" class="btn-auth">BERANDA</a>
     </header>
 
     <!-- KONTEN UTAMA HALAMAN SUKSES -->
@@ -31,6 +31,10 @@
             <div class="booking-summary">
                 <h3 class="summary-title">RINCIAN RESERVASI</h3>
                 <div class="summary-item">
+                    <span>KODE BOOKING</span>
+                    <strong id="resKodeBooking" class="text-gold">-</strong>
+                </div>
+                <div class="summary-item">
                     <span>NAMA</span>
                     <strong id="resNama">-</strong>
                 </div>
@@ -43,12 +47,20 @@
                     <strong id="resTanggal">-</strong>
                 </div>
                 <div class="summary-item">
-                    <span>JAM</span>
+                    <span>JAM MULAI</span>
                     <strong id="resJam">-</strong>
+                </div>
+                <div class="summary-item">
+                    <span>DURASI</span>
+                    <strong id="resDurasi">-</strong>
                 </div>
                 <div class="summary-item">
                     <span>PAKET</span>
                     <strong id="resPaket">-</strong>
+                </div>
+                <div class="summary-item">
+                    <span>TOTAL PEMBAYARAN</span>
+                    <strong id="resTotalHarga" class="text-gold">-</strong>
                 </div>
                 <div class="summary-item">
                     <span>STATUS</span>
@@ -60,7 +72,7 @@
                 Tim kami akan menghubungi kamu via WhatsApp dalam kurun waktu <strong>maksimal 2 jam</strong> untuk konfirmasi akhir.
             </p>
 
-            <a href="index.html" class="btn-submit btn-home">KEMBALI KE BERANDA</a>
+            <a href="dashboard.html" class="btn-submit btn-home">KEMBALI KE BERANDA</a>
         </div>
     </main>
 

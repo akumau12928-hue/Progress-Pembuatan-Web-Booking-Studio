@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Studio - GOKILZZZ STUDIO</title>
+    <!-- Google Fonts: Cinzel, Montserrat, & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="dashboard.html" class="logo">GOKILZZZ STUDIO</a>
+        <nav class="nav-links">
+            <a href="fasilitas.html">FASILITAS</a>
+            <a href="paket.html">PAKET</a>
+            <a href="galeri.html">GALERI</a>
+            <a href="booking.html" class="active">BOOKING</a>
+        </nav>
+        <a href="login.html" class="btn-auth">MASUK/DAFTAR</a>
+    </header>
+
+    <!-- ISI UTAMA -->
+    <main class="container">
+        <!-- KOLOM KIRI: INFORMASI STUDIO -->
+        <section class="info-section">
+            <h1 class="main-title">Booking<br>Studio</h1>
+            <p class="description">
+                Isi form di bawah dan tim kami akan menghubungi kamu dalam 2 jam untuk konfirmasi jadwal dan ketersediaan studio.
+            </p>
+            <ul class="contact-list">
+                <li>
+                    <span class="icon">📞</span>
+                    <span>085253649272</span>
+                </li>
+                <li>
+                    <span class="icon">✉️</span>
+                    <span>gokilzzzstudio@gmail.com</span>
+                </li>
+                <li>
+                    <span class="icon">📍</span>
+                    <span>Jl. Ketintang, Surabaya</span>
+                </li>
+                <li>
+                    <span class="icon">⏰</span>
+                    <span>Buka setiap hari, 09.00 - 23.00 WIB</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- KOLOM KANAN: FORM BOOKING -->
+        <section class="form-section">
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="nama">NAMA LENGKAP</label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap">
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">NOMOR WHATSAPP</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" required placeholder="08xxxxxxxxxx" pattern="^(08|62|\+62)[0-9]{8,12}$">
+                </div>
+
+                <div class="form-group">
+                    <label for="tanggal">TANGGAL BOOKING</label>
+                    <input type="date" id="tanggal" name="tanggal" required>
+                </div>
+
+                <!-- PAKET SEWA -->
+                <div class="form-group">
+                    <label for="paket">PAKET SEWA</label>
+                    <select name="paket" id="paket" required>
+                        <option value="" disabled selected>Pilih Paket...</option>
+                        <option value="Studio Standart" data-harga="150000" data-min-jam="1">Studio Standart - Rp 150.000 / jam</option>
+                        <option value="Studio Medium" data-harga="250000" data-min-jam="1">Studio Medium - Rp 250.000 / jam</option>
+                        <option value="Studio Profesional" data-harga="350000" data-min-jam="2">Studio Profesional - Rp 700.000 / 2 jam (Min. 2 jam)</option>
+                    </select>
+                </div>
+
+                <!-- DURASI SEWA -->
+                <div class="form-group">
+                    <label for="durasi">DURASI SEWA (JAM)</label>
+                    <select name="durasi" id="durasi" required>
+                        <option value="1">1 Jam</option>
+                        <option value="2">2 Jam</option>
+                        <option value="3">3 Jam</option>
+                        <option value="4">4 Jam</option>
+                        <option value="5">5 Jam</option>
+                    </select>
+                </div>
+
+                <!-- PEMILIHAN JAM INTERAKTIF -->
+                <div class="form-group">
+                    <label>PEMILIHAN JAM MULAI</label>
+                    <div class="time-slots" id="timeSlots">
+                        <button type="button" class="time-btn" data-time="09:00">09:00</button>
+                        <button type="button" class="time-btn" data-time="11:00">11:00</button>
+                        <button type="button" class="time-btn" data-time="13:00">13:00</button>
+                        <button type="button" class="time-btn" data-time="15:00">15:00</button>
+                        <button type="button" class="time-btn" data-time="17:00">17:00</button>
+                        <button type="button" class="time-btn" data-time="19:00">19:00</button>
+                        <button type="button" class="time-btn" data-time="21:00">21:00</button>
+                    </div>
+                    <!-- Hidden input untuk menyimpan jam yang dipilih -->
+                    <input type="hidden" id="jamDipilih" name="jamDipilih" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="catatan">CATATAN TAMBAHAN</label>
+                    <textarea name="catatan" id="catatan" rows="3" placeholder="Kebutuhan khusus, jumlah personil, atau catatan alat..."></textarea>
+                </div>
+
+                <!-- PREVIEW ESTIMASI TOTAL HARGA -->
+                <div class="total-box">
+                    <div class="total-price-wrapper">
+                        <span>ESTIMASI TOTAL BIAYA:</span>
+                        <strong id="estimasiHargaText">Rp 0</strong>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">LANJUT KE PEMBAYARAN</button>
+
+                <p class="whatsapp-help">
+                    Jam yang kamu mau terisi? <a href="https://wa.me/6285253649272" target="_blank">Tanya via WhatsApp &rarr;</a>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil & Histori Pemesanan - GOKILZZZ STUDIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="dashboard.html" class="logo">GOKILZZZ STUDIO</a>
+        <nav class="nav-links">
+            <a href="fasilitas.html">FASILITAS</a>
+            <a href="paket.html">PAKET</a>
+            <a href="galeri.html">GALERI</a>
+            <a href="booking.html">BOOKING</a>
+        </nav>
+        <div id="navAuthArea">
+            <a href="login.html" class="btn-outline">MASUK/DAFTAR</a>
+        </div>
+    </header>
+
+    <!-- KONTEN UTAMA -->
+    <main class="page-container">
+        <p class="sub-title">AKUN & RESERVASI</p>
+        <h1 class="main-title-page">Profil & <span>Histori</span></h1>
+
+        <!-- BAGIAN 1: DETAIL AKUN -->
+        <section class="profile-card">
+            <h2 class="profile-card-title">DETAIL AKUN</h2>
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <span class="profile-label">USERNAME</span>
+                    <strong class="profile-value" id="profileUsername">-</strong>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">EMAIL TERDAFTAR</span>
+                    <strong class="profile-value" id="profileEmail">-</strong>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">TOTAL RESERVASI</span>
+                    <strong class="profile-value" id="profileTotalBooking">0 Pemesanan</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- BAGIAN 2: HISTORI PEMESANAN -->
+        <section class="history-section">
+            <div class="history-header">
+                <h2 class="history-section-title">RIWAYAT PEMESANAN STUDIO</h2>
+                <a href="booking.html" class="btn-outline">BOOKING BARU</a>
+            </div>
+
+            <!-- Wadah Daftar Kartu Histori (Contoh struktur 1 kartu untuk preview tampilan) -->
+            <div class="history-list" id="historyList">
+                <article class="history-card">
+                    <div class="history-card-header">
+                        <div class="booking-code-wrapper">
+                            <span class="booking-code-label">KODE BOOKING</span>
+                            <strong class="booking-code">GKZ-20261117-0001</strong>
+                        </div>
+                        <span class="badge-status">MENUNGGU VERIFIKASI</span>
+                    </div>
+
+                    <div class="history-details-grid">
+                        <div class="history-detail-item">
+                            <span>NAMA PEMESAN</span>
+                            <strong>-</strong>
+                        </div>
+                        <div class="history-detail-item">
+                            <span>NOMOR WHATSAPP</span>
+                            <strong>-</strong>
+                        </div>
+                        <div class="history-detail-item">
+                            <span>PAKET SEWA</span>
+                            <strong>-</strong>
+                        </div>
+                        <div class="history-detail-item">
+                            <span>TANGGAL BOOKING</span>
+                            <strong>-</strong>
+                        </div>
+                        <div class="history-detail-item">
+                            <span>JAM & DURASI</span>
+                            <strong>-</strong>
+                        </div>
+                        <div class="history-detail-item">
+                            <span>PENGIRIM TRANSFER</span>
+                            <strong>-</strong>
+                        </div>
+                    </div>
+
+                    <div class="history-card-footer">
+                        <span class="history-timestamp">Dibuat pada: -</span>
+                        <div class="history-total">
+                            <span>TOTAL BAYAR:</span>
+                            <strong>Rp 0</strong>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Tampilan Jika Belum Ada Histori -->
+            <div class="empty-history" id="emptyHistory">
+                <p>Kamu belum memiliki riwayat pemesanan studio.</p>
+                <a href="booking.html" class="btn-primary">MULAI BOOKING SEKARANG</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/history.js"></script>
+</body>
+</html>
